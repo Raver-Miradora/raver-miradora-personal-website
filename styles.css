@@ -1,0 +1,823 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/************** Start of main page ************/
+#main{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 10%;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    font-size: 1em;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px; 
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-size: 5em;
+    font-family: sans-serif;
+    margin-top: 4vh;
+    color: gainsboro;
+    text-shadow: 0 0 10px rgba(255, 255, 255, .29);
+}
+.content p{
+    margin: 20px auto;
+    margin-top: 5px;
+    font-weight: 800;
+    line-height: 1.56em;
+    text-shadow: 2px 2px black;
+    font-size: 2em;
+    color: lightcoral;
+    text-shadow: 1px 1px white;
+}
+.content h2{
+    margin-top: 20vh;
+    font-weight: 100%;
+    line-height: 25px;
+    text-shadow: 1px 1px white;
+    color: lightcoral;
+    font-size: 2.4em;
+}
+.fa {
+    padding: 15px;
+    font-size: 100px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+.icons{
+    margin-top: 1em;
+} 
+.fa:hover {
+    opacity: 0.3;
+}
+  .fa-google {
+    background: white;
+    color: black;
+  }
+  .fa-facebook {
+    background: white;
+    color: black;
+  }
+  .fa-instagram {
+    background: white;
+    color: black;
+  }
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@media screen and (max-width: 600px)
+{
+    .content{
+        top: 40%;
+    }
+    .content h1{
+        font-size: 2.7em;
+        line-height: 50px;  
+    }
+    .content h2{
+        font-size: 1.6em;
+        line-height: 20px;  
+    }
+    .content p{
+        font-size: 1.5em;
+        line-height: 30px;  
+    }
+    .logo{
+        display: none;
+    }
+    .fa{
+        padding: 9px;
+    }
+    .navbar{
+        font-size: 0.8em;
+        padding-top: 30px;
+    }
+    .home-body{
+        position: static;
+        background-color: #000;
+        height: 200%;
+    }
+    .secondpage-home{
+        font-size: 11px;
+    }
+}
+
+/****************footer*******************/
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer-distributed {
+    background-color: #000;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 70px 50px 32px 50px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/**************** Footer left ***************/
+
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: lightcoral;
+    text-shadow: 1px 1px whitesmoke;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/**************** Footer Center ***************/
+
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: lightcoral;
+    color: black;
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    margin: 5px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: blueviolet;
+    text-decoration: none;
+    ;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #92999f  ;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: lightcoral;
+    text-shadow: 1px 1px whitesmoke;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 15%;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    opacity: 1.2;
+}
+
+.footer-links a:hover {
+    opacity: 1.2;
+}
+
+@media (max-width: 600px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+
+/***************** Start of Secondpage ******************/
+
+.home-body{
+    font-size: 16px;
+    line-height: 1.8em;
+    background-color: #000;
+    height: 110vh;
+    box-sizing: border-box;
+}
+.secondpage-home{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.home-body h1{
+    text-align: center;
+    color: lightcoral;
+    padding: 100px 0px 15px 0px;
+    font-weight: 800;
+    text-shadow: 1px 1px whitesmoke;
+}
+#home-text{
+    float: right;
+    width: 70%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+#home-text p{
+    padding-bottom: 30px;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: 500;
+    color: gainsboro;
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+#home-img{
+    float: left;
+    width: 30%;
+    height: 50vh;
+    box-sizing: border-box;
+    padding: 10px;
+    background-image: url(resources/me2.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px 2px solid #0a0a23;
+}
+.home-goal{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.home-goal h2{
+    color: lightcoral;
+    text-shadow: 2px 1px white;
+    font-weight: 600;
+    padding-top: 50px;
+}
+.home-goal p{
+    font-weight: 500;
+    line-height: 2em;
+    font-size: 1.1em;
+    color: gainsboro;
+}
+
+#home-text a:link {
+    color: blueviolet;
+    text-decoration: none;
+  }
+#home-text  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+#home-text a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px){
+    .home-body h1{
+        font-weight: 200;
+        font-size: 25px;
+    }
+    #home-img{
+        float: left;
+        width: 30%;
+        height: 26vh;
+        box-sizing: border-box;
+        padding: 0px;
+        background-image: url(resources/me2.jpg);
+        background-size: cover;
+        border-radius: 50%;
+    }
+    #home-text p{
+        padding-bottom: 30px;
+        text-align: justify;
+        text-justify: inter-word;
+        font-weight: 500;
+        color: gainsboro;
+        font-size: 1.1em;
+        line-height: 2em;
+        width: 100%;
+    }
+}
+/***************biodata.html*****************/
+.biodata {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #191923;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: white;
+}
+
+.biodatabox {
+    margin-top: 50px;
+    width: 70%;
+    height: 100%;
+    padding: 50px;
+    position: relative;
+    border: 3px solid black;
+    border-radius: 1px 1px 1px 1px;
+}
+
+.biodatabox::before {
+    width: 100%;
+    height: 100%;
+    margin: -50px;
+    position: absolute;
+    border-radius: 1px 90px 1px 1px;
+    content: "";
+    background: url(images/1.jpg);
+    background-size: 100% 100%;
+    opacity: .6;
+    z-index: -10;
+}
+
+.img {
+    position: absolute;
+    margin: 20px;
+    right: 0;
+}
+
+.img img {
+    backface-visibility: hidden;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.hed {
+    text-align: center;
+    font-size: 1.3em;
+    color: black;
+    font-weight: 900;
+    padding-top: 20px;
+}
+
+.heds {
+    font-size: 0.8em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.hedsa {
+    font-size: 30px;
+    font-weight: 600;
+    font-style: inherit;
+    color: rgb(247, 58, 11);
+    text-align: center;
+}
+
+.field {
+    border: 3px solid black;
+    border-radius: 15px;
+}
+    
+.email{
+    color: blue;
+}
+.ans {
+    font-size: 20px;
+    border-style: none none solid none;
+}
+.given{
+    font-size: 25px;
+    font-weight: 500;
+}
+.ans b{
+    font-size: 0.5em;
+}
+@media screen and (max-width: 600px){
+    .img {
+        display: none;
+    }
+}
+/*******************family.html*************************/
+#main-family{
+    font-size: 16px;
+    line-height: 2em;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #40434E;
+}
+#main-family h1{
+    font-weight: 800;
+    color: lightcoral;
+    text-shadow: 1px 1px white;
+    text-transform: uppercase;
+    padding: 1.5em 0px 0px 10em;
+    margin-bottom: -50px;
+}
+.family1-img{
+    float: right;
+    width: 30%;
+    height: 45vh;
+    box-sizing: border-box;
+    background-image: url(resources/family-full.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 6%;
+    margin-right: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.75);
+}
+.family1{
+    margin: auto;
+    overflow: hidden;
+    float: left;
+    width: 65%;
+    padding: 0 70px;
+    box-sizing: border-box;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+    font-size: 1.2em;
+}
+.family1 h3{
+    font-weight: 900;
+    text-align: center;
+}
+.secondpage-family{
+    width: 100%;
+    height: 110vh;
+    background-color: #40434E;
+}
+.family2{
+    margin: auto;
+    overflow: hidden;
+    float: right;
+    width: 70%;
+    padding: 0 70px;
+    box-sizing: border-box;
+    text-align: justify;
+    text-justify: inter-word;
+    color: cyan;
+    font-size: 1.1em;
+    line-height: 2em;
+}
+.family2-img{
+    float: left;
+    width: 30%;
+    height: 50vh;
+    box-sizing: border-box;
+    background-image: url(resources/parents.jpg);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 200px -50px 0px 40px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.75);
+}
+.family2 h2{
+    font-weight: 900;
+    text-align: center;
+    color: lightcoral;
+    text-shadow: 1px 1px white;
+}
+
+@media screen and (max-width: 600px){
+    
+    .family1{
+        margin: auto;
+        overflow: hidden;
+        float: none;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
+        text-justify: inter-word;
+        color: white;
+        font-size: 0.9em;
+    }
+    .family1-img{
+        display: none;
+    }
+    #main-family h1{
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 0px;
+        margin-top: 10px;
+        text-align: center;
+        font-size: 25px;
+    }
+    .family2{
+        margin: auto;
+        overflow: hidden;
+        float: none;
+        width: 100%;
+        padding: 20px;
+        color: white;
+        font-size: 0.9em;
+    }
+    .family2-img{
+        display: none;
+    }
+    .family2 h2{
+        font-weight: 900;
+        text-align: center;
+        margin-top: -20px;
+    }
+}
+/*******************friends.html************************/
+.main-friends{
+    font-size: 16px;
+    line-height: 1.8em;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #093A3E;
+}
+.main-friends h1{
+    font-weight: 800;
+    color: lightcoral;
+    text-shadow: 1px 1px white;
+    padding: 30px 0px 0px 760px;
+    text-transform: uppercase;
+    font-size: 1.9em;
+}
+.friends1-img{
+    float: left;
+    width: 30%;
+    height: 50vh;
+    box-sizing: border-box;
+    background-image: url(resources/friends1.jpeg);
+    background-size: cover;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.75);  
+    margin: 40px -50px 0px 40px;
+}
+.friends1{
+    margin: auto;
+    overflow: hidden;
+    float: right;
+    width: 70%;
+    padding: 0 70px;
+    box-sizing: border-box;
+    text-align: justify;
+    text-justify: inter-word;
+    color: cyan;
+    line-height: 2em;
+    font-size: 1.1em;
+}
+.friends1 h3{
+    font-weight: 900;
+    text-align: center;
+}
+.second-friends{
+    width: 100%;
+    height: 100vh;
+    background-color: #093A3E;
+}
+.friends2{
+    margin: auto;
+    overflow: hidden;
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    text-align: justify;
+    color: cyan;
+    line-height: 2em;
+    font-size: 1.1em;
+    padding: 0 70px;
+    margin-top: 30px;
+}
+.friends2-img{
+    float: right;
+    width: 30%;
+    height: 60vh;
+    box-sizing: border-box;
+    background-image: url(resources/friends5.jpeg);
+    background-size: cover;
+    border-radius: 50px;
+    margin: 90px 40px 0px -50px;;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.75);
+}
+.friends2 h2{
+    color: lightcoral;
+    text-shadow: 1px 1px white;
+}
+@media screen and (max-width: 640px){
+    .main-friends h1{
+        padding: 10px 0px 30px 0px; 
+        text-align: center;
+    }
+    .friends1-img{
+        display: none;
+    }
+    .friends1{
+        margin: auto;
+        float: none;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
+        text-justify: inter-word;
+        color: white;
+        font-size: 0.9em;
+        margin-top: -90px;
+    }
+    .friends2-img{
+        display: none;
+    }
+    .friends2{
+        margin: auto;
+        overflow: hidden;
+        float: none;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: justify;
+        text-justify: inter-word;
+        color: white;
+        font-size: 0.9em;
+        margin-top: -40px;
+    }
+}
+
+/*******************Gallery.html***********************/
+.gal {
+    box-sizing: border-box;
+}
+.gallery-body{
+    text-align: center;
+    margin: 0;
+    font-family: sans-serif;
+    background: #191923;
+}
+.gallery-body h2{
+    font-weight: 900;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 1px 1px white;
+    background-color: gainsboro;
+}
+.gallery-header {
+    text-align: center;
+    padding: 32px;
+    background-color: darkcyan;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+.gal-flexbox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+.gal-flexbox img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.75);
+}
+.gal-flexbox::after {
+    content: "";
+    width: 350px;
+}
+
