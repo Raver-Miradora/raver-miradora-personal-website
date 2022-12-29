@@ -2,3 +2,4 @@
 
 
 # A personal website using HTML, CSS and JS.
+(not yet responsive)
